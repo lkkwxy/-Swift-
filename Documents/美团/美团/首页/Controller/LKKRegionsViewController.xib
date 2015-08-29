@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8152.3" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8124.4"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LKKRegionsViewController" customModule="美团" customModuleProvider="target">
+            <connections>
+                <outlet property="changeCityView" destination="Xsj-m5-HgT" id="E7n-xy-x8V"/>
+                <outlet property="view" destination="iN0-l3-epB" id="DLR-9F-t7Z"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xsj-m5-HgT">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3R8-Bl-bh4">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="切换城市" image="btn_changeCity">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </state>
+                            <state key="highlighted" image="btn_changeCity_selected"/>
+                            <connections>
+                                <action selector="changCity:" destination="-1" eventType="touchUpInside" id="cQg-Df-EAk"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_cell_rightArrow" translatesAutoresizingMaskIntoConstraints="NO" id="4g5-tw-LQT">
+                            <rect key="frame" x="573" y="13.5" width="17" height="17"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="17" id="JeT-G2-cus"/>
+                                <constraint firstAttribute="height" constant="17" id="Xx6-cz-DBh"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="3R8-Bl-bh4" firstAttribute="leading" secondItem="Xsj-m5-HgT" secondAttribute="leading" id="6dO-sc-JCI"/>
+                        <constraint firstAttribute="bottom" secondItem="3R8-Bl-bh4" secondAttribute="bottom" id="8tS-2E-USa"/>
+                        <constraint firstAttribute="height" constant="44" id="Ete-tX-tSi"/>
+                        <constraint firstAttribute="trailing" secondItem="4g5-tw-LQT" secondAttribute="trailing" constant="10" id="NMs-wz-P52"/>
+                        <constraint firstAttribute="trailing" secondItem="3R8-Bl-bh4" secondAttribute="trailing" id="Ohd-64-rDL"/>
+                        <constraint firstItem="3R8-Bl-bh4" firstAttribute="top" secondItem="Xsj-m5-HgT" secondAttribute="top" id="eCz-Fn-fls"/>
+                        <constraint firstItem="4g5-tw-LQT" firstAttribute="centerY" secondItem="Xsj-m5-HgT" secondAttribute="centerY" id="pDK-Gk-QAN"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Xsj-m5-HgT" secondAttribute="trailing" id="CAm-T1-yuu"/>
+                <constraint firstItem="Xsj-m5-HgT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="him-fT-0z5"/>
+                <constraint firstItem="Xsj-m5-HgT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tca-LZ-vTj"/>
+            </constraints>
+            <point key="canvasLocation" x="498" y="323"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_changeCity" width="30" height="30"/>
+        <image name="btn_changeCity_selected" width="30" height="30"/>
+        <image name="icon_cell_rightArrow" width="17" height="17"/>
+    </resources>
+</document>

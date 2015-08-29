@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8152.3" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8124.4"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LKKCityViewController" customModule="美团" customModuleProvider="target">
+            <connections>
+                <outlet property="dimView" destination="GNu-lE-0cn" id="QAa-pL-GwP"/>
+                <outlet property="resultTableView" destination="9KA-ME-6Tt" id="dxf-74-FIT"/>
+                <outlet property="searchBar" destination="U5e-ah-z14" id="Kb2-te-zOD"/>
+                <outlet property="tableView" destination="rAb-hI-Cn3" id="cnK-jE-bc5"/>
+                <outlet property="view" destination="iN0-l3-epB" id="zG5-lD-mHi"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" placeholder="搜索" backgroundImage="bg_login_textfield" translatesAutoresizingMaskIntoConstraints="NO" id="U5e-ah-z14">
+                    <rect key="frame" x="20" y="10" width="560" height="44"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="81l-Vr-5ba"/>
+                    </connections>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="rAb-hI-Cn3" userLabel="tableView">
+                    <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                    <color key="backgroundColor" red="0.89262966769999996" green="1" blue="0.70312540700000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="lGu-vk-cNf"/>
+                        <outlet property="delegate" destination="-1" id="Y7X-N0-DIR"/>
+                    </connections>
+                </tableView>
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GNu-lE-0cn">
+                    <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="exH-7J-K6L" appends="YES" id="tA1-XJ-Npj"/>
+                    </connections>
+                </view>
+                <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9KA-ME-6Tt" userLabel="resultTableView">
+                    <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="CQ6-W4-SJr"/>
+                        <outlet property="delegate" destination="-1" id="nYm-Tc-7WM"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="rAb-hI-Cn3" secondAttribute="trailing" id="5n0-6F-QPH"/>
+                <constraint firstAttribute="trailing" secondItem="GNu-lE-0cn" secondAttribute="trailing" id="BnA-v4-oMU"/>
+                <constraint firstItem="GNu-lE-0cn" firstAttribute="top" secondItem="U5e-ah-z14" secondAttribute="bottom" constant="10" id="Hej-nW-HWy"/>
+                <constraint firstItem="GNu-lE-0cn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="I1J-9m-NPc"/>
+                <constraint firstItem="GNu-lE-0cn" firstAttribute="top" secondItem="9KA-ME-6Tt" secondAttribute="top" id="Jtx-RI-fwS"/>
+                <constraint firstItem="rAb-hI-Cn3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="SHE-Sh-uXf"/>
+                <constraint firstItem="GNu-lE-0cn" firstAttribute="leading" secondItem="9KA-ME-6Tt" secondAttribute="leading" id="UVz-Te-SCE"/>
+                <constraint firstAttribute="bottom" secondItem="GNu-lE-0cn" secondAttribute="bottom" id="aNc-eE-1wK"/>
+                <constraint firstItem="GNu-lE-0cn" firstAttribute="trailing" secondItem="9KA-ME-6Tt" secondAttribute="trailing" id="dNx-mz-ou1"/>
+                <constraint firstAttribute="bottom" secondItem="rAb-hI-Cn3" secondAttribute="bottom" id="g2g-Fg-S9x"/>
+                <constraint firstItem="GNu-lE-0cn" firstAttribute="bottom" secondItem="9KA-ME-6Tt" secondAttribute="bottom" id="jT4-6D-5yq"/>
+                <constraint firstAttribute="trailing" secondItem="U5e-ah-z14" secondAttribute="trailing" constant="20" id="l2A-V6-Kk5"/>
+                <constraint firstItem="rAb-hI-Cn3" firstAttribute="top" secondItem="U5e-ah-z14" secondAttribute="bottom" constant="10" id="oNY-8X-quk"/>
+                <constraint firstItem="U5e-ah-z14" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="qax-py-knC"/>
+                <constraint firstItem="U5e-ah-z14" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="qdx-aU-ptb"/>
+            </constraints>
+            <point key="canvasLocation" x="384" y="44"/>
+        </view>
+        <tapGestureRecognizer id="exH-7J-K6L">
+            <connections>
+                <action selector="dimVlick" destination="-1" id="tIo-IB-J3R"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="bg_login_textfield" width="9" height="11"/>
+    </resources>
+</document>
