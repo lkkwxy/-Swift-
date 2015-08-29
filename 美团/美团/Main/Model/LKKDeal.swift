@@ -56,12 +56,14 @@ class LKKDeal: NSObject,NSCoding {
         aCoder.encodeObject(publish_date, forKey: "publish_date")
         aCoder.encodeObject(deal_h5_url, forKey: "deal_h5_url")
         aCoder.encodeObject(restrictions, forKey: "restrictions")
+        aCoder.encodeObject(purchase_deadline, forKey: "purchase_deadline")
     }
     override init() {
         super.init()
     }
     required init?(coder aDecoder: NSCoder){
         super.init()
+        purchase_deadline = aDecoder.decodeObjectForKey("purchase_deadline") as? String
         deal_id = aDecoder.decodeObjectForKey("deal_id") as? String
         title = aDecoder.decodeObjectForKey("title") as? String
         desc = aDecoder.decodeObjectForKey("desc") as? String
