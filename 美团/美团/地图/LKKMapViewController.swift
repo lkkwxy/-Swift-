@@ -69,6 +69,8 @@ class LKKMapViewController: UIViewController,MKMapViewDelegate,LKKAnnotationView
             selectedCategory = nil
         }
         self.categoryPopover.dismissPopoverAnimated(true)
+        self.mapView.removeAnnotations(self.mapView.annotations)
+        self.mapView(mapView, regionDidChangeAnimated: true)
     }
     func cancle(){
         self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
